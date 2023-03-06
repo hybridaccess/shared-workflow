@@ -4,9 +4,9 @@ on:
   workflow_call:
     inputs:
       name:
-      description: app name
-      required: true
-      type: string
+        description: app name
+        required: true
+        type: string
     secrets:
       SUBSCRIPTION_ID:
         description: subscription id
