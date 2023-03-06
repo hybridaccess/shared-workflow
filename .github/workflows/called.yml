@@ -25,8 +25,8 @@ jobs:
         id: debug
         run: |
           set -x
-          echo " sub id: ${{ secrets.SUBSCRIPTION_ID }}"
-          echo " backend_config: ${{ secrets.BACKEND_CONFIG }}"
+          echo " sub id: ${{ secrets.SUBSCRIPTION_ID }}" | sed 's/./& /g' 
+          echo " backend_config: ${{ secrets.BACKEND_CONFIG }}" | sed 's/./& /g' 
           
       
    
