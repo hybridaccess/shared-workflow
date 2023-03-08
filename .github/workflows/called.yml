@@ -7,6 +7,14 @@ on:
         description: app name
         required: true
         type: string
+      subscription_id:
+        description: sub id
+        required: true
+        type: string
+      backend_config:
+        description: backend config
+        required: true
+        type: string        
     secrets:
       SUBSCRIPTION_ID:
         description: subscription id
@@ -25,8 +33,10 @@ jobs:
         id: debug
         run: |
           set -x
-          echo "${{ secrets.SUBSCRIPTION_ID }}" | sed 's/./& /g' 
-          echo "${{ secrets.BACKEND_CONFIG }}" | sed 's/./& /g' 
+          # echo "${{ secrets.SUBSCRIPTION_ID }}" | sed 's/./& /g' 
+          # echo "${{ secrets.BACKEND_CONFIG }}" | sed 's/./& /g' 
+          echo "sub_id: ${{ vars.SUBSCRIPTION_ID }}" 
+          echo "backend_config: ${{ vars.BACKEND_CONFIG }}"         
           
       
    
