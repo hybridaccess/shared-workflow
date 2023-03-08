@@ -15,13 +15,6 @@ on:
         description: backend config
         required: true
         type: string        
-    secrets:
-      SUBSCRIPTION_ID:
-        description: subscription id
-        required: true
-      BACKEND_CONFIG:
-        description: backend config
-        required: true
 jobs:
   plan:
     name: TF Plan
