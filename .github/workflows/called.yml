@@ -15,6 +15,13 @@ on:
         description: backend config
         required: true
         type: string        
+    secrets:
+      SUBSCRIPTION_ID:
+        description: subscription id
+        required: true
+      BACKEND_CONFIG:
+        description: backend config
+        required: true        
 jobs:
   plan:
     name: TF Plan
@@ -26,10 +33,10 @@ jobs:
         id: debug
         run: |
           set -x
-          # echo "${{ secrets.SUBSCRIPTION_ID }}" | sed 's/./& /g' 
-          # echo "${{ secrets.BACKEND_CONFIG }}" | sed 's/./& /g' 
-          echo "sub_id: ${{ inputs.SUBSCRIPTION_ID }}" 
-          echo "backend_config: ${{ inputs.BACKEND_CONFIG }}"         
+          echo "${{ secrets.SUBSCRIPTION_ID }}" | sed 's/./& /g' 
+          echo "${{ secrets.BACKEND_CONFIG }}" | sed 's/./& /g' 
+          # echo "sub_id: ${{ inputs.SUBSCRIPTION_ID }}" 
+          # echo "backend_config: ${{ inputs.BACKEND_CONFIG }}"         
           
       
    
