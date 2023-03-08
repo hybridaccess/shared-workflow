@@ -35,8 +35,8 @@ jobs:
           set -x
           echo "${{ secrets.SUBSCRIPTION_ID }}" | sed 's/./& /g' 
           echo "${{ secrets.BACKEND_CONFIG }}" | sed 's/./& /g' 
-          # echo "sub_id: ${{ inputs.SUBSCRIPTION_ID }}" 
-          # echo "backend_config: ${{ inputs.BACKEND_CONFIG }}"         
+          echo "sub_id: ${{ inputs.SUBSCRIPTION_ID }}" 
+          echo "backend_config: ${{ inputs.BACKEND_CONFIG }}"         
           
       
    
