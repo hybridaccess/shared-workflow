@@ -24,7 +24,7 @@ on:
         required: true        
 jobs:
   plan:
-    name: TF Plan ${{ inputs.name }}
+    name: TF Plan - ${{ inputs.name }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
